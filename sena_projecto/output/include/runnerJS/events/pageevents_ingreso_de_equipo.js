@@ -1,0 +1,2 @@
+
+Runner.pages.PageSettings.addPageEvent('ingreso de equipo',Runner.pages.constants.PAGE_ADD,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){var ctrl=Runner.getControl(pageid,'Serial');ctrl.addStyle('text-transform: uppercase;');});

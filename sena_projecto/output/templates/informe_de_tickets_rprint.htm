@@ -1,0 +1,308 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+			
+	</head>
+
+	<body class="{$stylename} function-rprint" >
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="left"
+			data-body-width="standard"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pdflink_block}
+<span data-itemtype="print_pdf" data-itemid="print_pdf" {$item_print_pdf} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	pdflink" data-pdfpage="rprint" 
+data-scope="0" 
+data-split="0" 
+data-records="10" 
+data-orientation="portrait" 
+data-scale="100" 
+data-filename="Informe de Tickets.pdf" 
+data-pagesize="LETTER" 
+data-pagetype="rprint" 
+{$pdflink_attrs} >
+							Vista PDF			</a>
+</span>
+{END pdflink_block}
+		</div>					</div>
+			 
+				<div class="row">
+			 
+				<div 
+	data-cellId="top_c2" data-pageid="{$pageid}"	{$cell_top_c2}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		<img src="{$file_url images/logo-eiasa-horizontal.png}" data-itemtype="image" data-itemid="image" {$item_image} data-pageid="{$pageid}" />
+	 
+		<h2 data-itemtype="print_header" data-itemid="print_header" {$item_print_header} data-pageid="{$pageid}" >{$pagetitlelabel Informe_de_Tickets rprint}</h2>
+		</div>					</div>
+			</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+				<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		<span data-itemtype="print_pages" data-itemid="print_pages" {$item_print_pages} data-pageid="{$pageid}" data-small >
+	{$print_pages_labelprint_pages}
+</span>			{END firstAboveGridCell}	
+	</div>					</div>
+			</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+<style>
+	td.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary.pagesummary {
+		background-color: #ffffbb;
+	}
+	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color: #ffe0b0;
+	}
+	.rnr-report {
+		width: 100%;
+	}
+			td.group_1{
+			background-color: #FFFFFF;
+		}
+		td.nbgroup_1{
+			background-color: #FFFFFF;
+		}
+		td.header_1 {
+			background-color: #FFFFFF; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+			td.group_2{
+			background-color: #FFFFFF;
+		}
+		td.nbgroup_2{
+			background-color: #FFFFFF;
+		}
+		td.header_2 {
+			background-color: #FFFFFF; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+			td.group_3{
+			background-color: #FFFFFF;
+		}
+		td.nbgroup_3{
+			background-color: #FFFFFF;
+		}
+		td.header_3 {
+			background-color: #FFFFFF; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+			td.group_4{
+			background-color: #FFFFFF;
+		}
+		td.nbgroup_4{
+			background-color: #FFFFFF;
+		}
+		td.header_4 {
+			background-color: #FFFFFF; 
+			font-size: 120%;
+			padding: 2px 8px;
+			font-weight: bold;
+		}
+		td.blackshade {
+		font-size: 120%;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+		.fieldnamesrow > * 
+	{
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	</style>
+<div id="grid_block{$id}" class="rnr-report-gridblock">
+						
+
+
+<table class="table table-striped table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" >
+	<tbody>			
+{BEGIN grid_row}
+				<!--  group headers -->
+							{BEGIN Empresa_newgroup}							
+		<tr class="group-spliter-1"  >
+			<td class="header_1" colspan="5">
+				{$label Informe_de_Tickets Empresa }:&nbsp;
+				{$xEmpresa_grval}
+				<span data-itemtype="report_group_field" data-itemid="report_group_field" {$item_report_group_field} data-pageid="{$pageid}" data-field="Empresa" data-fieldname="Empresa" >
+{$Empresa_grval}
+</span>			</td>
+		</tr>
+		
+				{END Empresa_newgroup}
+							{BEGIN Tecnico_newgroup}							
+		<tr class="group-spliter-2"  >
+			<td class="header_2" colspan="5">
+				{$label Informe_de_Tickets Tecnico }:&nbsp;
+				{$xTecnico_grval}
+				<span data-itemtype="report_group_field" data-itemid="report_group_field1" {$item_report_group_field1} data-pageid="{$pageid}" data-field="Tecnico" data-fieldname="Tecnico" >
+{$Tecnico_grval}
+</span>			</td>
+		</tr>
+		
+				{END Tecnico_newgroup}
+							{BEGIN cedula_newgroup}							
+		<tr class="group-spliter-3"  >
+			<td class="header_3" colspan="5">
+				{$label Informe_de_Tickets cedula }:&nbsp;
+				{$xcedula_grval}
+				<span data-itemtype="report_group_field" data-itemid="report_group_field2" {$item_report_group_field2} data-pageid="{$pageid}" data-field="cedula" data-fieldname="cedula" >
+{$cedula_grval}
+</span>			</td>
+		</tr>
+		
+				{END cedula_newgroup}
+							{BEGIN Fecha_de_atencio_n_newgroup}							
+		<tr class="group-spliter-4"  >
+			<td class="header_4" colspan="5">
+				{$label Informe_de_Tickets Fecha_de_atencio_n }:&nbsp;
+				{$xFecha_de_atencio_n_grval}
+				<span data-itemtype="report_group_field" data-itemid="report_group_field3" {$item_report_group_field3} data-pageid="{$pageid}" data-field="Fecha_de_atencio_n" data-fieldname="Fecha de atencioón" >
+{$Fecha de atencioón_grval}
+</span>			</td>
+		</tr>
+		
+				<tr class="fieldnamesrow group-headers">
+																																						<td class="blackshade {$fieldclass_fecha}">{$label Informe_de_Tickets fecha }</td>
+														<td class="blackshade {$fieldclass_Tickets}">{$label Informe_de_Tickets Tickets }</td>
+														<td class="blackshade {$fieldclass_Localidad}">{$label Informe_de_Tickets Localidad }</td>
+														<td class="blackshade {$fieldclass_Estado_del_Ticket}">{$label Informe_de_Tickets Estado_del_Ticket }</td>
+														<td class="blackshade {$fieldclass_Observaciones}">{$label Informe_de_Tickets Observaciones }</td>
+									</tr>
+				{END Fecha_de_atencio_n_newgroup}
+		
+
+			<!--  data-->
+		{BEGIN row_data}
+		<tr >
+																																																										<td class="data {$fieldclass_fecha}">
+			{$xfecha_value}
+			<span data-itemtype="report_grid_field" data-itemid="report_grid_field" {$item_report_grid_field} data-pageid="{$pageid}" data-field="fecha" data-fieldname="fecha" >
+{$fecha_value}
+</span>			</td>
+																		<td class="data {$fieldclass_Tickets}">
+			{$xTickets_value}
+			<span data-itemtype="report_grid_field" data-itemid="report_grid_field1" {$item_report_grid_field1} data-pageid="{$pageid}" data-field="Tickets" data-fieldname="Tickets" >
+{$Tickets_value}
+</span>			</td>
+																		<td class="data {$fieldclass_Localidad}">
+			{$xLocalidad_value}
+			<span data-itemtype="report_grid_field" data-itemid="report_grid_field3" {$item_report_grid_field3} data-pageid="{$pageid}" data-field="Localidad" data-fieldname="Localidad" >
+{$Localidad_value}
+</span>			</td>
+																		<td class="data {$fieldclass_Estado_del_Ticket}">
+			{$xEstado_del_Ticket_value}
+			<span data-itemtype="report_grid_field" data-itemid="report_grid_field4" {$item_report_grid_field4} data-pageid="{$pageid}" data-field="Estado_del_Ticket" data-fieldname="Estado del Ticket" >
+{$Estado del Ticket_value}
+</span>			</td>
+																		<td class="data {$fieldclass_Observaciones}">
+			{$xObservaciones_value}
+			<span data-itemtype="report_grid_field" data-itemid="report_grid_field5" {$item_report_grid_field5} data-pageid="{$pageid}" data-field="Observaciones" data-fieldname="Observaciones" >
+{$Observaciones_value}
+</span>			</td>
+									</tr>
+		{END row_data}
+	
+	<!---  group summary-->
+					{BEGIN Fecha_de_atencio_n_endgroup}
+
+		<tr >
+					<td class="group_4" colspan="5">
+				Resumen de {$label Informe_de_Tickets Fecha_de_atencio_n } {$Fecha_de_atencio_n_grval} - <span class="summary-4" data-type="summary">
+					{$groupFecha_de_atencio_n_total_cnt}
+				</span> Registros totales			</td>			
+				</tr>
+		
+		
+		
+		
+			
+
+		{END Fecha_de_atencio_n_endgroup}
+													{BEGIN Empresa_endgroup}
+
+		<tr style="display:none; height:0px;">
+					<td class="group_1" colspan="5">
+				Resumen de {$label Informe_de_Tickets Empresa } {$Empresa_grval} - <span class="summary-1" data-type="summary">
+					{$groupEmpresa_total_cnt}
+				</span> Registros totales			</td>			
+				</tr>
+		
+		
+		
+		
+			
+
+		{END Empresa_endgroup}
+			
+{END grid_row}
+
+
+
+
+
+    
+    
+
+
+	</tbody>
+</table>			</div>
+{END grid_block}									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}" >		
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

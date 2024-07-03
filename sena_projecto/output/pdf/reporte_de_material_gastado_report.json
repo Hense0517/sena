@@ -1,0 +1,458 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption Reporte_de_Material_Gastado}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel Reporte_de_Material_Gastado report}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 6,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+''
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_export_report_excel}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_export_report_word}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_export_report_pdf}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+																							{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"Mostrando %first% - %last% de %total%","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_page_size}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_print_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+
+
+{BEGIN grid_row}
+			{BEGIN Empresa_newgroup}
+		[
+						{
+				colSpan: 6,
+				text: ['{$jslabel Reporte_de_Material_Gastado Empresa } ', {$Empresa_grval}],
+				style: 'header_1',
+			}
+		],
+
+				{END Empresa_newgroup}
+			{BEGIN Tecnico_newgroup}
+		[
+						{
+				text: [''],
+				style: 'group_1',
+			},
+						{
+				colSpan: 5,
+				text: ['{$jslabel Reporte_de_Material_Gastado Tecnico } ', {$Tecnico_grval}],
+				style: 'header_2',
+			}
+		],
+
+				{END Tecnico_newgroup}
+			{BEGIN cedula_newgroup}
+		[
+						{
+				text: [''],
+				style: 'group_1',
+			},
+						{
+				text: [''],
+				style: 'group_2',
+			},
+						{
+				colSpan: 4,
+				text: ['{$jslabel Reporte_de_Material_Gastado cedula } ', {$cedula_grval}],
+				style: 'header_3',
+			}
+		],
+
+				{END cedula_newgroup}
+			{BEGIN Fecha_de_Consumo_newgroup}
+		[
+						{
+				text: [''],
+				style: 'group_1',
+			},
+						{
+				text: [''],
+				style: 'group_2',
+			},
+						{
+				text: [''],
+				style: 'group_3',
+			},
+						{
+				colSpan: 3,
+				text: ['{$jslabel Reporte_de_Material_Gastado Fecha_de_Consumo } ', {$Fecha_de_Consumo_grval}],
+				style: 'header_4',
+			}
+		],
+
+				{END Fecha_de_Consumo_newgroup}
+			{BEGIN Material_newgroup}
+		[
+						{
+				text: [''],
+				style: 'group_1',
+			},
+						{
+				text: [''],
+				style: 'group_2',
+			},
+						{
+				text: [''],
+				style: 'group_3',
+			},
+						{
+				text: [''],
+				style: 'group_4',
+			},
+						{
+				colSpan: 2,
+				text: ['{$jslabel Reporte_de_Material_Gastado Material } ', {$Material_grval}],
+				style: 'header_5',
+			}
+		],
+
+				[
+								{
+					text: [''],
+					style: 'group_1',
+				},
+								{
+					text: [''],
+					style: 'group_2',
+				},
+								{
+					text: [''],
+					style: 'group_3',
+				},
+								{
+					text: [''],
+					style: 'group_4',
+				},
+								{
+					text: [''],
+					style: 'group_5',
+				},
+																																																															{
+						text: '{$jslabel Reporte_de_Material_Gastado Cantidad }',
+						style: 'blackshade'
+					},
+											],
+				{END Material_newgroup}
+	
+	
+					{BEGIN Material_endgroup}
+
+				[
+											{
+					text: [''],
+					style: 'group_1',
+				},
+								{
+					text: [''],
+					style: 'group_2',
+				},
+								{
+					text: [''],
+					style: 'group_3',
+				},
+								{
+					text: [''],
+					style: 'group_4',
+				},
+							
+						{
+				colSpan:2,
+				text: ['Resumen de {$jslabel Reporte_de_Material_Gastado Material } ', 
+					{$Material_grval},
+					' - ', 
+					{$groupMaterial_total_cnt}, 
+					' Registros totales'],
+				style: 'group_5',
+			},
+					],
+			
+				[
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_1',
+			
+						},
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_2',
+			
+						},
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_3',
+			
+						},
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_4',
+			
+						},
+									{
+				text: [
+				
+									'Sum ',
+						
+				],
+							style: 'group_5',
+			
+						},
+									{
+				text: [
+				
+									{$groupMaterial_totalCantidad_sum},
+						
+				],
+							style: 'group_5',
+			
+							alignment: '{$Cantidad_align}',
+						},
+					],
+		
+		
+		
+		
+		{END Material_endgroup}
+																{BEGIN Empresa_endgroup}
+
+			
+		
+		
+		
+		
+		{END Empresa_endgroup}
+			
+{END grid_row}
+
+
+
+
+
+
+
+
+
+
+
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+{
+	table: {
+	
+				
+		location: 'below-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_pagination}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'center',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+			],
+	}

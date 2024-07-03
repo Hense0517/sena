@@ -1,0 +1,464 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+						pagesummary: {
+		fillColor: '#ffffbb',
+	},
+	globalsummary: {
+		fillColor: '#ffe0b0',
+	},
+			group_1: {
+			fillColor: '#FFFFFF'
+		},
+		nbgroup_1: {
+			fillColor: '#FFFFFF'
+		},
+		header_1: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_Empresa: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		group_Empresa: {
+			fillColor: '#FFFFFF'
+		},
+
+			group_2: {
+			fillColor: '#FFFFFF'
+		},
+		nbgroup_2: {
+			fillColor: '#FFFFFF'
+		},
+		header_2: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_Tecnico: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		group_Tecnico: {
+			fillColor: '#FFFFFF'
+		},
+
+			group_3: {
+			fillColor: '#FFFFFF'
+		},
+		nbgroup_3: {
+			fillColor: '#FFFFFF'
+		},
+		header_3: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_cedula: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		group_cedula: {
+			fillColor: '#FFFFFF'
+		},
+
+			group_4: {
+			fillColor: '#FFFFFF'
+		},
+		nbgroup_4: {
+			fillColor: '#FFFFFF'
+		},
+		header_4: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_Fecha_de_atencio_n: {
+			fillColor: '#FFFFFF',
+			fontSize: 15,
+			bold: true
+		},
+		group_Fecha_de_atencio_n: {
+			fillColor: '#FFFFFF'
+		},
+
+		
+	blackshade: {
+		fontSize: 15,
+	},
+	summarycell: {
+		border:[false, true, false, true ]
+	},
+/*
+		.fieldnamesrow > * 
+	{
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+	*/	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid_caption}
+			{
+				text: '{$jscaption Informe_de_Tickets}',
+			},
+		{END embedded_grid_caption}
+		{BEGIN embedded_page_title}
+			{
+				text: '{$jspagetitlelabel Informe_de_Tickets rprint}',
+			},
+		{END embedded_page_title}		
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			standAlonePage: true,
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					return 0.1; 
+				},
+				hLineColor: function(i, node) { return 'lightgray'; },
+				vLineColor: function(i, node) { return 'lightgray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 1 
+								{BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 5,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_print_pdf}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+						[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"text":{$pdf_image images/logo-eiasa-horizontal.png undefined 0},"hidden":"{$item_hide_image}"},
+				
+				
+			{"text":"{$jspagetitlelabel Informe_de_Tickets rprint}","hidden":"{$item_hide_print_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"Página %current% / %total%","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+
+
+{BEGIN grid_row}
+	 
+		{BEGIN Empresa_newgroup}							
+		[
+			{
+				colSpan: 5,
+				text: ['{$jslabel Informe_de_Tickets Empresa } ', {$Empresa_grval}],
+				style: 'header_1',
+			}
+		],
+		
+				{END Empresa_newgroup}
+	 
+		{BEGIN Tecnico_newgroup}							
+		[
+			{
+				colSpan: 5,
+				text: ['{$jslabel Informe_de_Tickets Tecnico } ', {$Tecnico_grval}],
+				style: 'header_2',
+			}
+		],
+		
+				{END Tecnico_newgroup}
+	 
+		{BEGIN cedula_newgroup}							
+		[
+			{
+				colSpan: 5,
+				text: ['{$jslabel Informe_de_Tickets cedula } ', {$cedula_grval}],
+				style: 'header_3',
+			}
+		],
+		
+				{END cedula_newgroup}
+	 
+		{BEGIN Fecha_de_atencio_n_newgroup}							
+		[
+			{
+				colSpan: 5,
+				text: ['{$jslabel Informe_de_Tickets Fecha_de_atencio_n } ', {$Fecha_de_atencio_n_grval}],
+				style: 'header_4',
+			}
+		],
+		
+				[
+																																						{
+				text: '{$jslabel Informe_de_Tickets fecha }',
+				style: 'blackshade',
+				alignment: '{$fecha_align}',
+			},
+														{
+				text: '{$jslabel Informe_de_Tickets Tickets }',
+				style: 'blackshade',
+				alignment: '{$Tickets_align}',
+			},
+														{
+				text: '{$jslabel Informe_de_Tickets Localidad }',
+				style: 'blackshade',
+				alignment: '{$Localidad_align}',
+			},
+														{
+				text: '{$jslabel Informe_de_Tickets Estado_del_Ticket }',
+				style: 'blackshade',
+				alignment: '{$Estado_del_Ticket_align}',
+			},
+														{
+				text: '{$jslabel Informe_de_Tickets Observaciones }',
+				style: 'blackshade',
+				alignment: '{$Observaciones_align}',
+			},
+									],
+				{END Fecha_de_atencio_n_newgroup}
+		
+
+			{BEGIN row_data}
+		[
+																																						{
+				text: {$fecha_value},
+				alignment: '{$fecha_align}',
+			},
+														{
+				text: {$Tickets_value},
+				alignment: '{$Tickets_align}',
+			},
+														{
+				text: {$Localidad_value},
+				alignment: '{$Localidad_align}',
+			},
+														{
+				text: {$Estado_del_Ticket_value},
+				alignment: '{$Estado_del_Ticket_align}',
+			},
+														{
+				text: {$Observaciones_value},
+				alignment: '{$Observaciones_align}',
+			},
+									],
+		{END row_data}
+	
+					{BEGIN Fecha_de_atencio_n_endgroup}
+
+				[
+							
+				{
+					colSpan:5,
+					text: ['Resumen de {$jslabel Informe_de_Tickets Fecha_de_atencio_n } ', 
+						{$Fecha_de_atencio_n_grval},
+						' - ', 
+						{$groupFecha_de_atencio_n_total_cnt}, 
+						' Registros totales'],
+					style: 'group_4',
+				}
+					],
+				
+		
+		
+		
+		
+		
+		{END Fecha_de_atencio_n_endgroup}
+													{BEGIN Empresa_endgroup}
+
+				
+		
+		
+		
+		
+		
+		{END Empresa_endgroup}
+			
+{END grid_row}
+
+
+
+
+	
+		
+
+
+
+
+
+
+									]
+			
+			}
+		},
+		{END body}
+	],
+	footer: [
+								
+''
+			],
+	}

@@ -1,0 +1,151 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel Cargue_de_Material_a_Tecnicos_Contratistas import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+			
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$id_carga_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$Fecha_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$Material_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$Tecnico_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$Observacion_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$Empresa_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$Cantidad_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$Cargue_o_Descargue_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$Bodega_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+     
+      
+      },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  
